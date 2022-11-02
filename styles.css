@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --backgorund: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%); 
+    --text: hsl(215, 51%, 70%);
+    --header:hsl(0, 0%, 100%);
+    --dontknow: hsl(178, 100%, 50%);
+    --eyebg: hsla(178, 100%, 50%, 0.425);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--backgorund);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+p{
+    font-size: 17px;
+    color: var(--text);
+    font-weight: 300;
+}
+
+h1{
+    color: var(--header);
+}
+section{
+    background-color: var(--card-bg);
+    width: 20rem;
+    text-align: left;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem 2rem rgba(0, 0, 0, 0.39);
+}
+
+section div:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+
+.image img{ 
+    width: 17rem;
+    border-radius: 1rem;
+}
+
+.eye  {
+    display: none;
+    width: 17rem;
+    height: 17rem;
+    position: absolute;
+    background-color: var(--eyebg);
+    border-radius: 1rem;
+}
+
+.eye img{
+    width: 3rem;
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}    
+
+.info span{
+    color: var(--dontknow);
+}
+.line{
+    border-bottom: 2px solid var(--line);
+    width: 100%;
+}
+
+.creator {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}        
+.creator img {
+    border: 1px solid var(--header);
+    border-radius: 50%;
+    width:2.3rem;
+    margin-right: .5rem;
+}
+
+.creator span {
+    color: var(--header);
+    font-weight: 400;
+}
+
+
+.attribution{ 
+    font-size: .52rem; 
+    position: absolute;
+    right: 50%;
+    bottom: 2rem; 
+    transform: translateX(50%); 
+    color: white;
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+}
+
+/********** HOVER SECTION **********/
+
+.image:hover > .eye{
+    display: inline-block;
+}
+
+.creator span:hover,
+h1:hover{
+    color: var(--dontknow);
+}
+
+@media screen and (max-width:425px){
+    section {
+        max-width: 21rem;
+        box-shadow: 0 0 2rem .8rem rgba(0, 0, 0, 0.39);
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
